@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SkySwipe</title>
+    <link rel="stylsheet" href="./normalize.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+  </head>
+  <nav>
+    <h1 class="headline">SkySwipe</h1>
+  </nav>
+  <body class="body">
+    <div>
+      <script src="./app.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+      <div class="row justify-content-center">
+        <div id="section1"  style="display: block">
+          <div class="question">Where do you want to go?</div>
+          <p>Departure City:
+            <div class="custom-select">
+                <select>
+                  <option class="value0" value="0">Pick a Continent:</option>
+                  <option value="1">Africa</option>
+                  <option value="2">Asia</option>
+                  <option value="3">Europe</option>
+                  <option value="4">North America</option>
+                  <option value="5">South America</option>
+                </select>
+                <div class="text">Departure Date:</div>            
+                <label for="flightdate"><input type="date" name="dateofbirth" id="dateofbirth"></label>
+                <a href="#section2"><button class="button" id="section1_btn">Fly, you fools!<button></a>
+                </div>
+        </div>
+        <div id="section3" style="display: none">
+            Destination Continent:
+            <div class="custom-select">
+                <select>
+                  <option class="value0" value="0">Pick a Continent:</option>
+                  <option value="1">Africa</option>
+                  <option value="2">Asia</option>
+                  <option value="3">Europe</option>
+                  <option value="4">North America</option>
+                  <option value="5">South America</option>
+                </select>
+            Return Date:
+            <label for="flightdate">Date</label>
+            <input type="date" name="dateofbirth" id="dateofbirth">
+            <input type="button" id="text_value" value="Get Value" class="inputtext"/>
+            <input type="button" id="text_reset" value=" Reset " class="inputtext"/>
+          </div>
+        </div>
+          <div id="section4" style="display: none">
+            <div id="flightInfo" class="container">
+                <div id="myProgress"class="lds-spinner" style="display: none"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                <div id="fltOps" style="display: none">
+                <!-- Country -->
+                <div id="country">COUNTRY</div>
+                <!-- Flight/Prices -->
+                <div id="flightoptions">OPTIONS</div>
+                <!-- section for result swiping -->
+                  <div class="card" id="board"></div>
+                    <!-- next question -->
+                    <button id="likeBtn">Like</button>
+                    <button id="dislikeBtn">Dislike</button>
+                </div>
+              </div>
+          </div>
+        </div>
+        </div>
+      <!-- include style="display: none" in div to remove container when all inputs are not complete -->
+    </div>
+    <link
+      href="https://fonts.googleapis.com/css?family=Sacramento|Sintony&display=swap"
+      rel="stylesheet"
+    />
+  </body>
+</html>
